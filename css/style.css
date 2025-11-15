@@ -169,15 +169,47 @@
 }
 
 .page-header {
-    padding-top: 200px;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-1.jpg) top center no-repeat;
-    background-size: cover;
+  padding-top: 200px;
+  background: url("../img/s2.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
 }
+
+.page-header::before {
+  content: none;
+  background: none;
+}
+
 
 .page-header .breadcrumb-item + .breadcrumb-item::before {
     color: var(--bs-white);
 }
 
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 180px;
+  gap: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* potrait & landscape seimbang */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(250, 253, 255);
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* biar 5 foto rapi */
+.photo-grid img:nth-child(5) {
+  grid-column: span 2; /* foto terakhir full lebar */
+  height: 200px;
+}
 
 /*** Title ***/
 .title {
@@ -258,7 +290,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3rem solid rgba(0, 0, 0, .5);
+    border: 3rem solid rgb(250, 253, 255);
     border-radius: 300px;
     z-index: 1;
 }
@@ -297,7 +329,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .7);
+    background: rgb(246, 250, 250);
 }
 
 .team-item .team-body {
@@ -313,7 +345,7 @@
     height: calc(100% - 60px);
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgb(247, 238, 238);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -405,4 +437,13 @@
 	background-position: 0px 0px;
     background-repeat: repeat-x;
 	animation: footerAnimatedBg 50s linear infinite;
+}
+
+.carousel-caption {
+  background: none !important;
+}
+
+.carousel-item::before {
+  content: none !important;
+  background: none !important;
 }
