@@ -5,6 +5,22 @@
     body {
         background-color: #e7f2ff !important;
     }
+  /* Perlebar form dan taruh di tengah */
+  #contact-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  #contactForm {
+    width: 100%;
+    max-width: 700px; /* ubah ukuran sesuai keinginan (default 700px) */
+    margin: auto;
+  }
+
+  /* Biar floating label lebih rapi */
+  .form-floating > label {
+    padding-left: 10px;
+  }
 </style>
 
 <head>
@@ -77,14 +93,6 @@
 
         <div class="page-header pb-5">
             <div class="container text-center py-5">
-                <h1 class="display-4 text-uppercase mb-3 animated slideInDown" style="color: black;">Contact</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
-                        <li class="breadcrumb-item"><a href="index.html" style="color: black;">Home</a></li>
-                        <li class="breadcrumb-item"><a href="lesson.html" style="color: black;">About</a></li>
-                        <li class="breadcrumb-item"><a href="lesson.html" style="color: black;">Lesson</a></li>
-                    </ol>
-                </nav>
             </div>
         </div>
     </div>
@@ -98,91 +106,98 @@
                 <div class="col-lg-6">
                     <div class="title wow fadeInUp" data-wow-delay="0.1s">
                         <div class="title-left">
-                            <h4 style="color: black;">Contact</h4>
-                            <h3 style="color: black;">Get in Touch with Surf School Kuta Lombok</h3>
+                            <h4 style="color: black;">Book Now</h4>
                         </div>
                     </div>
-                    <h6 class="lh-base mb-4" style="color: black;">We’d love to hear from you! Whether you have questions about our surf lessons, want to book a private session, or just need tips 
-                    about surfing in Lombok, our friendly team is ready to help. Reach out today and let’s make your surf adventure unforgettable! 🌊🏄‍♂️</h6>
-                    <table class="table table-white mb-0 wow fadeInUp" data-wow-delay="0.3s">
-                        <tr style="color: black;">
-                            <td>PHONE</td>
-                            <td>+62 878 8024 0720</td>
-                        </tr>
-                        <tr style="color: black;">
-                            <td>E-MAIL</td>
-                            <td>info@example.com</td>
-                        </tr>
-                        <tr style="color: black;">
-                            <td>ADDRESS</td>
-                            <td>Jl. Pariwisata Pantai Kuta, Kec. Pujut, NTB</td>
-                        </tr>
-                        <tr class="border-dark">
-                            <td style="color: black;">FOLLOW US</td>
-                            <td>
-                                <a class="me-1" href="http://tiktok.com/@lombok_surfing"><i class="fab fa-tiktok"></i></a>
-                                <a class="me-1" href="https://www.instagram.com/lombok.surfing?igsh=YjRjOHQ0dGIyeWpl"><i class="fab fa-instagram"></i></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+<div id="contact-wrapper" class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
   <form id="contactForm" style="color: black;">
     <div class="row g-3">
+
       <div class="col-md-6">
         <div class="form-floating">
           <input type="text" class="form-control border-0" id="name" placeholder="Your Name" required>
           <label for="name">Your Name</label>
         </div>
       </div>
+
       <div class="col-md-6">
         <div class="form-floating">
           <input type="email" class="form-control border-0" id="email" placeholder="Your Email" required>
           <label for="email">Your Email</label>
         </div>
       </div>
-      <div class="col-12">
+
+      <div class="col-md-12">
         <div class="form-floating">
-          <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
-          <label for="subject">Subject</label>
+          <input type="text" class="form-control border-0" id="phone" placeholder="Phone Number" required>
+          <label for="phone">Phone Number</label>
         </div>
       </div>
-      <div class="col-12">
+
+      <div class="col-md-12">
         <div class="form-floating">
-          <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 150px" required></textarea>
-          <label for="message">Message</label>
+          <select id="package" class="form-control border-0" required>
+            <option value="">Select Package</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+          <label for="package">Package Selected</label>
         </div>
       </div>
+
+      <div class="col-md-12">
+        <div class="form-floating">
+          <select id="payment" class="form-control border-0" required>
+            <option value="">Choose Payment Method</option>
+            <option value="QRIS">QRIS</option>
+            <option value="Bank Transfer">Transfer</option>
+            <option value="Cash">Cash</option>
+          </select>
+          <label for="payment">Payment Method</label>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-floating">
+          <textarea class="form-control border-0" placeholder="Additional Message" id="message" style="height: 150px"></textarea>
+          <label for="message">Additional Message</label>
+        </div>
+      </div>
+
       <div class="col-12">
         <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">
           Send Message
         </button>
       </div>
+
     </div>
   </form>
 </div>
 
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Hindari reload halaman
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
+    const phone = document.getElementById("phone").value;
+    const selectedPackage = document.getElementById("package").value;
+    const payment = document.getElementById("payment").value;
     const message = document.getElementById("message").value;
 
-    // Nomor WA (ganti dengan nomormu)
     const phoneNumber = "6287880240720";
 
-    // Susun pesan tanpa karakter aneh atau emoji
     const whatsappMessage =
-"Hello Surf School Kuta Lombok!\n" +
-"------------------------------\n" +
+"New Booking Request - Surf School Kuta Lombok\n" +
+"---------------------------------------\n" +
 "Name: " + name + "\n" +
 "Email: " + email + "\n" +
-"Subject: " + subject + "\n" +
-"Message:\n" + message + "\n" +
-"------------------------------\n" +
+"Phone: " + phone + "\n" +
+"Selected Package: " + selectedPackage + "\n" +
+"Payment Method: " + payment + "\n" +
+"Additional Message:\n" + message + "\n" +
+"---------------------------------------\n" +
 "Sent from Surf School Kuta Lombok Website";
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -192,6 +207,7 @@
     window.open(whatsappURL, "_blank");
 });
 </script>
+
 
                </div>
             </div>
