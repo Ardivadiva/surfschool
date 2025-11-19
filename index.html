@@ -70,22 +70,6 @@
                 right: 10px;
                 bottom: 10px;
             }
-
-            /* Ensure only one "Book Now" button appears for mobile */
-            .d-lg-none {
-                display: block !important;
-            }
-            
-            .d-lg-flex {
-                display: none !important;
-            }
-
-            /* Style the "Book Now" button for mobile */
-            .book-now-btn {
-                width: 100%; /* Full width */
-                margin-top: 20px; /* Add margin for spacing */
-                padding: 10px; /* Button padding */
-            }
         }
 
         /* Mobile-friendly for larger text in carousel */
@@ -146,10 +130,6 @@
                     <a href="lesson.html" class="nav-item nav-link">Lesson</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <!-- This button is shown only on larger screens -->
-                <div class="d-none d-lg-flex">
-                    <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
-                </div>
             </div>
         </nav>
 
@@ -165,7 +145,7 @@
                             </div>
                         </div>
                         <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Experience the Spirit of Surfing with the Heart of Lombok</p>
-                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
+                        <a href="book.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -178,7 +158,7 @@
                             </div>
                         </div>
                         <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Ride the Waves, Feel the Vibes!</p>
-                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
+                        <a href="book.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -193,11 +173,6 @@
         </div>
     </div>
     <!-- Header End -->
-
-    <!-- Book Now button for mobile, positioned after the Contact link -->
-    <div class="d-lg-none">
-        <a class="btn btn-outline-primary border-2 w-100 text-center book-now-btn" href="book.html">Book Now</a>
-    </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
