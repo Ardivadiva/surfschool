@@ -14,8 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -32,6 +31,92 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Styles for Mobile Responsiveness -->
+    <style>
+        /* Ensure images in carousel scale properly */
+        .carousel-item img {
+            width: 100%;
+            height: 100vh; /* Full screen height for mobile */
+            object-fit: cover; /* To cover the full screen without distortion */
+        }
+
+        /* Navbar styles for mobile */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+                width: 100%;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 15px;
+                display: block;
+            }
+
+            .carousel-caption h1 {
+                font-size: 2.5rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1.2rem;
+            }
+
+            .carousel-caption .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            .back-to-top {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            /* Ensure only one "Book Now" button appears for mobile */
+            .d-lg-none {
+                display: block !important;
+            }
+            
+            .d-lg-flex {
+                display: none !important;
+            }
+
+            /* Style the "Book Now" button for mobile */
+            .book-now-btn {
+                width: 100%; /* Full width */
+                margin-top: 20px; /* Add margin for spacing */
+                padding: 10px; /* Button padding */
+            }
+        }
+
+        /* Mobile-friendly for larger text in carousel */
+        @media (max-width: 576px) {
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+
+            .carousel-caption .btn {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Ensuring responsive layout for entire container */
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Fixing the back-to-top button for mobile */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,7 +128,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Header Start -->
     <div class="container-fluid p-0">
@@ -62,9 +146,9 @@
                     <a href="lesson.html" class="nav-item nav-link">Lesson</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
+                <!-- This button is shown only on larger screens -->
                 <div class="d-none d-lg-flex">
-                    <a class="btn btn-outline-primary border-2" href="book.html">Book
-                        Now</a>
+                    <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
                 </div>
             </div>
         </nav>
@@ -81,8 +165,7 @@
                             </div>
                         </div>
                         <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Experience the Spirit of Surfing with the Heart of Lombok</p>
-                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
-                            More</a>
+                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -95,8 +178,7 @@
                             </div>
                         </div>
                         <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Ride the Waves, Feel the Vibes!</p>
-                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
-                            More</a>
+                        <a href="lesson.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -112,9 +194,13 @@
     </div>
     <!-- Header End -->
 
+    <!-- Book Now button for mobile, positioned after the Contact link -->
+    <div class="d-lg-none">
+        <a class="btn btn-outline-primary border-2 w-100 text-center book-now-btn" href="book.html">Book Now</a>
+    </div>
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

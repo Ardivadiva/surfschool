@@ -447,3 +447,93 @@
   content: none !important;
   background: none !important;
 }
+
+    /* Ensure carousel images scale properly */
+    .carousel-item img {
+        width: 100vh;
+        height: 100vh; /* Full screen height for mobile */
+        object-fit: cover; /* To cover the full screen without distortion */
+    }
+
+    /* Ensure images in content section scale properly */
+    .content-image img {
+        width: 100vh;
+        height: 100vh; /* Full screen height for mobile */
+        object-fit: cover; /* To cover the full screen without distortion */
+    }
+
+    /* Navbar styles for mobile */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .carousel-caption h1 {
+            font-size: 2.5rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+        }
+
+        .carousel-caption .btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+
+        .back-to-top {
+            right: 10px;
+            bottom: 10px;
+        }
+
+        /* Ensure only one "Book Now" button appears for mobile */
+        .d-lg-none {
+            display: block !important;
+        }
+        
+        .d-lg-flex {
+            display: none !important;
+        }
+
+        /* Style the "Book Now" button for mobile */
+        .book-now-btn {
+            width: 100%; /* Full width */
+            margin-top: 20px; /* Add margin for spacing */
+            padding: 10px; /* Button padding */
+        }
+    }
+
+    /* Mobile-friendly for larger text in carousel */
+    @media (max-width: 576px) {
+        .carousel-caption h1 {
+            font-size: 2rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+
+        .carousel-caption .btn {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+        }
+    }
+
+    /* Ensuring responsive layout for entire container */
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Fixing the back-to-top button for mobile */
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
