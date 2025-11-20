@@ -2,6 +2,19 @@
 <html lang="en">
 
 <style>
+    .img-box {
+        width: 200px; /* Adjust width as needed */
+        height: 200px; /* Adjust height as needed */
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     body {
         background-color: #e7f2ff !important;
     }
@@ -41,15 +54,6 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
 
     <!-- Header Start -->
     <div class="container-fluid p-0">
@@ -92,82 +96,128 @@
 
 
     <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5 style="color: black;">Services</h5>
-                        <h1 style="color: black;">How We Help You?</h1>
+<div class="container">
+    <!-- Beginner Package -->
+    <div class="service-item">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-12">
+                <div class=" text-left p-5 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="img-box">
+                        <img class="img-fluid" src="img/service-1.jpg" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">BEGINNER</h3>
-                            <p class="mb-4">The Beginner package is specifically designed for those trying surfing for the first time. 
-                                Lessons take place in spots with small, gentle waves, making them safe and comfortable for beginners. 
-                                The instructor will provide step-by-step guidance, from board introductions and pop-up techniques, 
-                                maintaining balance, and basic wave reading. It's perfect for building confidence before moving on to 
-                                the next level.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="beginner.html">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">INTERMEDIATE</h3>
-                            <p class="mb-4">For those who already understand the basics of surfing and want to improve their technique, 
-                                the Intermediate package offers sessions in spots with larger, more stable waves. 
-                                The training focuses on improving board control, basic maneuvers, positioning, and how to choose 
-                                the right wave. Professional instructors will provide on-the-spot analysis and correction to help you 
-                                develop your skills faster.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="inter.html">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-3.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">ADVANCED</h3>
-                            <p class="mb-4">The Advanced Package is for experienced surfers looking to conquer fast, 
-                                challenging waves. Sessions are held in spots with more technical and aggressive waves. 
-                                You'll learn surfing strategies in complex conditions, advanced maneuvering techniques, 
-                                power and flow improvements, and personal surfing style optimization. Ideal for surfers 
-                                looking to push their limits.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="advanced.html">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
+                <div class="service-text px-5 py-4 wow fadeInRight" data-wow-delay="0.5s">
+                    <h3 class="text-uppercase" style="color: black;">Beginner Package</h3>
+                    <p class="mb-4" style="color: black; text-align: left;">Perfect for first-time surfers. Lessons are at safe, gentle spots with small waves. Build confidence and learn the basics.</p>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">What You Will Learn</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Introduction to surfboard & equipment</li>
+                        <li>Basic standing technique (pop-up)</li>
+                        <li>Balance & body positioning</li>
+                        <li>Paddling technique</li>
+                        <li>Basic wave reading</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Benefits</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Safe and beginner-friendly surf spots</li>
+                        <li>Full guidance from professional instructors</li>
+                        <li>Suitable for both kids and adults</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Price</h6>
+                    <p style="color: black; text-align: left;">IDR 600K / pax (2 hours)</p>
+
+                    <a class="btn btn-outline-primary border-2 px-4" href="book.html">Book Now</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Intermediate Package -->
+    <div class="service-item mt-5">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-12">
+                <div class=" text-left p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="img-box">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="service-text px-5 py-4 wow fadeInLeft" data-wow-delay="0.5s">
+                    <h3 class="text-uppercase" style="color: black;">Intermediate Package</h3>
+                    <p class="mb-4" style="color: black; text-align: left;">For surfers who know the basics and want to improve. Sessions take place at spots with bigger, more stable waves.</p>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">What You Will Learn</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Wave selection & positioning</li>
+                        <li>Speed control</li>
+                        <li>Basic maneuvers (turning, trimming)</li>
+                        <li>Improved board control</li>
+                        <li>Real-time feedback from instructors</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Benefits</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Technical training to upgrade your surfing</li>
+                        <li>Access to spots with consistent, bigger waves</li>
+                        <li>Great choice for leveling up to advanced</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Price</h6>
+                    <p style="color: black; text-align: left;">IDR 600K / pax (2 hours)</p>
+
+                    <a class="btn btn-outline-primary border-2 px-4" href="book.html">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Package -->
+    <div class="service-item mt-5">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-12">
+                <div class=" text-left p-5 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="img-box">
+                        <img class="img-fluid" src="img/service-3.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="service-text px-5 py-4 wow fadeInRight" data-wow-delay="0.5s">
+                    <h3 class="text-uppercase" style="color: black;">Advanced Package</h3>
+                    <p class="mb-4" style="color: black; text-align: left;">For experienced surfers. Focus on advanced techniques and tackling fast, powerful waves. Perfect for pushing your limits.</p>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">What You Will Learn</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Advanced maneuvers (cutbacks, bottom turns)</li>
+                        <li>Reading fast waves</li>
+                        <li>Strong paddling & optimized positioning</li>
+                        <li>Strategies for surfing complex conditions</li>
+                        <li>Refining your personal surf style</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Benefits</h6>
+                    <ul style="color: black; text-align: left;">
+                        <li>Access to advanced-level surf spots</li>
+                        <li>Coaching from highly skilled, experienced surfers</li>
+                        <li>Perfect for improving technique, power, and consistency</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-3" style="color: black; text-align: left;">Price</h6>
+                    <p style="color: black; text-align: left;">IDR 600K / pax (2 hours)</p>
+
+                    <a class="btn btn-outline-primary border-2 px-4" href="book.html">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Service End -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 
     <!-- Footer Start -->
