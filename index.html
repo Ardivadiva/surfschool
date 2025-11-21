@@ -34,14 +34,15 @@
 
     <!-- Custom Styles for Mobile Responsiveness -->
     <style>
-        /* Ensure images in carousel scale properly */
+        body, h1, h2, h3, h4, h5, h6, p, li, a {
+            color: black;
+        }
         .carousel-item img {
             width: 100%;
-            height: 100vh; /* Full screen height for mobile */
-            object-fit: cover; /* To cover the full screen without distortion */
+            height: 100vh;
+            object-fit: cover;
         }
 
-        /* Navbar styles for mobile */
         @media (max-width: 768px) {
             .navbar-nav {
                 text-align: center;
@@ -72,38 +73,56 @@
             }
         }
 
-        /* Mobile-friendly for larger text in carousel */
-        @media (max-width: 576px) {
-            .carousel-caption h1 {
-                font-size: 2rem;
-            }
-
-            .carousel-caption p {
-                font-size: 1rem;
-            }
-
-            .carousel-caption .btn {
-                font-size: 0.9rem;
-                padding: 8px 15px;
-            }
-        }
-
-        /* Ensuring responsive layout for entire container */
         .container-fluid {
             padding-left: 0;
             padding-right: 0;
         }
 
-        /* Fixing the back-to-top button for mobile */
         .back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
         }
+
+        /* Surf Package Table Styling */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .pricing-table th, .pricing-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .pricing-table th {
+            background-color: #f8f9fa;
+        }
+
+        /* About Section Styling */
+        .title-left h5 {
+            color: #000;
+        }
+
+        .title-left h1 {
+            color: #000;
+        }
+
+        .body {
+            background-color: rgb(245, 220, 220);
+        }
+
+        @media (max-width: 767px) {
+    .btn-outline-primary {
+        display: block !important;
+    }
+}
     </style>
 </head>
 
-<body>
+<body class="body">
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -123,13 +142,6 @@
                 data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="lesson.html" class="nav-item nav-link">Lesson</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
             </div>
         </nav>
 
@@ -144,13 +156,268 @@
                                 <h1 class="display-1">Surf School</h1>
                             </div>
                         </div>
-                        <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Experience the Spirit of Surfing with the Heart of Lombok</p>
-                        <a href="book.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Book Now</a>
+                        <h3>Surf School in Kuta Lombok</h3>
+                        <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Ride Your First Wave Today</p>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
     <!-- Header End -->
+
+
+    <!-- About Our School Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Left Column: History and Information -->
+            <div class="col-lg-7 pb-0 pb-lg-5 py-5">
+                <div class="pb-0 pb-lg-5 py-5">
+                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-left">
+                            <h5 style="color: black;">History</h5>
+                            <h1 style="color: black;">About Our School</h1>
+                        </div>
+                    </div>
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s" style="color: black;">
+                        Welcome to Surf School Kuta Lombok, where adventure meets paradise!
+                        Located on the stunning south coast of Lombok, our surf school offers exciting lessons for all levels — from beginners catching their first wave to surfers looking to improve their skills.
+                    </p>
+
+                    <ul class="list-group list-group-flush mb-5 wow fadeInUp" data-wow-delay="0.3s" style="color: black;">
+                        <li class="list-group-item border-secondary ps-0">
+                            <i class="fa fa-check-circle text-primary me-1"></i>
+                            Our passionate local instructors are dedicated to sharing their ocean knowledge and helping you enjoy a fun, safe, and unforgettable surfing experience — no matter your skill level.
+                        </li>
+                        <li class="list-group-item border-secondary ps-0" style="color: black;">
+                            <i class="fa fa-check-circle text-primary me-1"></i>
+                            We provide high-quality surfboards, safety gear, and a comfortable learning environment surrounded by Lombok’s stunning beaches and clear blue waters.
+                        </li>
+                        <li class="list-group-item border-secondary ps-0" style="color: black;">
+                            <i class="fa fa-check-circle text-primary me-1"></i>
+                            At Surf School Kuta Lombok, surfing is more than a sport — it’s a way to connect with nature, the sea, and yourself. After your lesson, relax on the beach, enjoy the sunshine, and embrace the laid-back island vibes. 🌴
+                        </li>
+                    </ul>
+
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s" style="color: black;">
+                        Come join us and discover why Kuta Lombok is one of Indonesia’s most beautiful surf destinations. Ride the waves, make new friends, and create memories that will last a lifetime! 🌺🌞
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Photo Grid -->
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="photo-grid">
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <img src="img/s9.jpg" alt="Surf 1">
+                    <img src="img/s11.jpg" alt="Surf 1">
+                    <img src="img/s10.jpg" alt="Surf 2">
+                    <img src="img/s13.jpg" alt="Surf 5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Our School Section End -->
+
+    <!-- Surf Packages Start -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4" style="color: black;">Our Surf Packages</h2>
+
+<!-- BEGINNER SURF PACKAGE -->
+<div class="surf-package">
+    <h3>Beginner Surf Package</h3>
+    <br>
+    <div class="d-flex flex-wrap align-items-center">
+        <!-- Gambar di sebelah kiri -->
+        <img src="img/service-1.jpeg" alt="Beginner Surf" class="img-fluid mb-3" style="max-width: 50%; margin-right: 20px;">
+        
+        <!-- Teks di sebelah kanan -->
+        <div>
+            <p><strong>Description:</strong> Sessions at spots with small, gentle waves - 2 hours in the water.</p>
+            <ul>
+                <li>Instructor</li>
+                <li>Surfboard</li>
+                <li>Boat</li>
+                <li>Equipment</li>
+                <li>Transport (pick up and drop hotel)</li>
+            </ul>
+
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+                <tr>
+                    <th>1 Session</th>
+                    <th>3 Sessions</th>
+                </tr>
+                <tr>
+                    <td>IDR 600k/pax</td>
+                    <td>Disc 20%</td>
+                </tr>
+            </table>
+            <br>
+                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+        </div>
+    </div>            
+</div>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- INTERMEDIATE SURF PACKAGE -->
+        <div class="surf-package">
+            <h3>Intermediate Surf Package</h3>
+            <img src="img/service-1.jpg" alt="Intermediate Surf" class="img-fluid mb-3">
+            <p><strong>Description:</strong> Sessions at spots with larger, more stable waves - 2 hours in the water.</p>
+            <ul>
+                <li>Instructor</li>
+                <li>Surfboard</li>
+                <li>Boat</li>
+                <li>Equipment</li>
+                <li>Transport (pick up and drop hotel)</li>
+            </ul>
+
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+                <tr>
+                    <th>1 Session</th>
+                    <th>3 Sessions</th>
+                </tr>
+                <tr>
+                    <td>IDR 600k/pax</td>
+                    <td>Disc 20%</td>
+                </tr>
+            </table>
+            <br>
+                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <!-- ADVANCED SURF PACKAGE -->
+        <div class="surf-package">
+            <h3>Advanced Surf Package</h3>
+            <img src="img/service-2.jpg" alt="Advanced Surf" class="img-fluid mb-3">
+            <p><strong>Description:</strong> Lessons at challenging spots with fast waves - 2 hours in the water.</p>
+            <ul>
+                <li>Instructor</li>
+                <li>Surfboard</li>
+                <li>Boat</li>
+                <li>Equipment</li>
+                <li>Transport (pick up and drop hotel)</li>
+            </ul>
+
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+                <tr>
+                    <th>1 Session</th>
+                    <th>3 Sessions</th>
+                </tr>
+                <tr>
+                    <td>IDR 600k/pax</td>
+                    <td>Disc 20%</td>
+                </tr>
+            </table>
+            <br>
+                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <!-- PRIVATE SURF PACKAGE -->
+        <div class="surf-package">
+            <h3>Private Surf Package</h3>
+            <img src="img/service-3.jpeg" alt="Private Surf" class="img-fluid mb-3">
+            <p><strong>Description:</strong> Freedom to explore South Lombok's best waves based on daily conditions and your comfort level - 2 hours in the water.</p>
+            <ul>
+                <li>Private Instructor</li>
+                <li>Surfboard</li>
+                <li>Boat</li>
+                <li>Equipment</li>
+                <li>Transport (pick up and drop hotel)</li>
+            </ul>
+
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+                <tr>
+                    <th>1 Session</th>
+                    <th>3 Sessions</th>
+                </tr>
+                <tr>
+                    <td>IDR 600k/pax</td>
+                    <td>Disc 20%</td>
+                </tr>
+            </table>
+            <br>
+                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <!-- SURF GUIDING PACKAGE -->
+        <div class="surf-package">
+            <h3>Surf Guiding Package</h3>
+            <img src="img/service-3.webp" alt="Surf Guiding" class="img-fluid mb-3">
+            <p><strong>Description:</strong> Explore the waves on Lombok Island and get an unforgettable fun experience.</p>
+            <ul>
+                <li>Instructor</li>
+                <li>Surfboard</li>
+                <li>Boat</li>
+                <li>Equipment</li>
+                <li>Transport (pick up and drop hotel)</li>
+            </ul>
+
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+                <tr>
+                    <th>1 Session</th>
+                    <th>3 Sessions</th>
+                </tr>
+                <tr>
+                    <td>IDR 600k/pax</td>
+                    <td>Disc 20%</td>
+                </tr>
+            </table>
+            <br>
+                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Surf Packages End -->
+
+        <br>
+        <br>
+        <br>
+
+    <!-- Google Map Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.3s">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.861599125668!2d116.28107539999999!3d-8.892457199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcda9a469755e83%3A0xaa701609063ec123!2sSurfing%20Banditos%20Lombok%20-%20Surf%20School!5e0!3m2!1sid!2sid!4v1763172924733!5m2!1sid!2sid"
+            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"
+            style="width: 100%; height: 500px; border: 0;"></iframe>
+    </div>
+    <!-- Google Map End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <a href="index.html">
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i
+                        class="fa-solid fa-umbrella-beach me-1"></i>SURFSCHOOL</h1>
+            </a>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="http://tiktok.com/@lombok_surfing"><i
+                        class="fab fa-tiktok"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="https://www.instagram.com/lombok.surfing?igsh=YjRjOHQ0dGIyeWpl"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
+            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
