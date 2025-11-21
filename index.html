@@ -35,7 +35,7 @@
     <!-- Custom Styles for Mobile Responsiveness -->
     <style>
         body, h1, h2, h3, h4, h5, h6, p, li, a {
-            color: black;
+            color: rgb(0, 0, 0);
         }
         .carousel-item img {
             width: 100%;
@@ -47,11 +47,6 @@
             .navbar-nav {
                 text-align: center;
                 width: 100%;
-            }
-
-            .navbar-nav .nav-link {
-                padding: 10px 15px;
-                display: block;
             }
 
             .carousel-caption h1 {
@@ -118,14 +113,47 @@
     .btn-outline-primary {
         display: block !important;
     }
+    }
+
+    /* WhatsApp Icon Styling */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #25d366;
+    font-size: 3rem; /* Adjust size here */
+    z-index: 9999;
 }
+
+.whatsapp-icon:hover {
+    background-color: #ffffff;
+}
+
+    /* Make navbar transparent when scrolling */
+    #navbar {
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        background-color: transparent;
+    }
+
+    /* Align logo and text in navbar */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        margin-right: 10px; /* Adds space between logo and text */
+    }
     </style>
 </head>
 
 <body class="body">
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -134,30 +162,27 @@
 
     <!-- Header Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-solid fa-umbrella-beach me-1"></i>SURFSCHOOL</h2>
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg px-lg-5 bg-white" id="navbar">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+            <!-- Logo and Text -->
+            <img src="img/logo.png" alt="Surf School Logo" class="me-2" style="height: 40px; width: auto;">
+            <h2 class="mb-0 text-uppercase" style="font-size: 1.5rem;">SURFSCHOOL</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/s4.jpg" alt="Image">
+                    <img class="w-100" src="img/s5.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="title mx-5 px-5 animated slideInDown">
-                            <div class="title-center">
-                                <h5>Welcome</h5>
-                                <h1 class="display-1">Surf School</h1>
-                            </div>
-                        </div>
+                        <h1 style="font-size: 6rem;">L O M B O K</h1>
+                        <h2 style="font-size: 2.5rem;">S U R F I N G</h2>
                         <h3>Surf School in Kuta Lombok</h3>
-                        <p class="fs-5 mb-5 animated slideInDown" style="color: black;">Ride Your First Wave Today</p>
+                        <p class="fs-5 mb-5 animated slideInDown" style="color: black;">RIDE YOUR FIRST WAVE TODAY</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +278,7 @@
                 </tr>
             </table>
             <br>
-                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+                <a class="btn btn-outline-primary border-2" href="https://wa.me/6287880240720" target="_blank">Book Now</a>
         </div>
     </div>            
 </div>
@@ -287,7 +312,7 @@
                 </tr>
             </table>
             <br>
-                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+                <a class="btn btn-outline-primary border-2" href="https://wa.me/6287880240720" target="_blank">Book Now</a>
         </div>
         <br>
         <br>
@@ -318,7 +343,7 @@
                 </tr>
             </table>
             <br>
-                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+                <a class="btn btn-outline-primary border-2" href="https://wa.me/6287880240720" target="_blank">Book Now</a>
         </div>
         <br>
         <br>
@@ -349,7 +374,7 @@
                 </tr>
             </table>
             <br>
-                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+                <a class="btn btn-outline-primary border-2" href="https://wa.me/6287880240720" target="_blank">Book Now</a>
         </div>
         <br>
         <br>
@@ -380,7 +405,7 @@
                 </tr>
             </table>
             <br>
-                <a class="btn btn-outline-primary border-2" href="book.html">Book Now</a>
+                <a class="btn btn-outline-primary border-2" href="https://wa.me/6287880240720" target="_blank">Book Now</a>
         </div>
     </div>
 
@@ -399,13 +424,18 @@
     </div>
     <!-- Google Map End -->
 
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/6287880240720" target="_blank" class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-white text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <a href="index.html">
-                <h1 class="display-4 mb-3 text-white text-uppercase"><i
-                        class="fa-solid fa-umbrella-beach me-1"></i>SURFSCHOOL</h1>
+                <h1 class="display-4 mb-3 text-dark text-uppercase">
+                <img src="img/logo.png" alt="Surf School Logo" class="me-2" style="height: 80px; width: auto;">SURFSCHOOL</h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="http://tiktok.com/@lombok_surfing"><i
@@ -421,6 +451,18 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+    // Add transparent navbar effect on scroll
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+            navbar.classList.add("navbar-scrolled");
+        } else {
+            navbar.classList.remove("navbar-scrolled");
+        }
+    };
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
