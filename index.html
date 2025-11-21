@@ -31,9 +31,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/your-adobe-font-kit-link.css">
 
     <!-- Custom Styles for Mobile Responsiveness -->
     <style>
+    .photo-grid .image-container {
+        display: flex; /* Membuat gambar sejajar secara horizontal */
+        gap: 10px; /* Menambahkan jarak antar gambar */
+        align-items: center; /* Menyelaraskan gambar di tengah secara vertikal */
+    }
+    .photo-grid img {
+        width: 100%; /* Menyesuaikan lebar gambar dengan kotaknya */
+        max-width: 200px; /* Membatasi ukuran gambar agar tidak terlalu besar */
+        height: auto; /* Menjaga rasio gambar */
+    }
         body, h1, h2, h3, h4, h5, h6, p, li, a {
             color: rgb(0, 0, 0);
         }
@@ -147,6 +158,16 @@
     .navbar-brand img {
         margin-right: 10px; /* Adds space between logo and text */
     }
+
+        @font-face {
+        font-family: 'Lithos Pro';
+        src: url('path/to/LithosPro-Regular.ttf') format('truetype');
+    }
+
+    .carousel-caption h3,
+    .carousel-caption p {
+        font-family: 'Lithos Pro', sans-serif;
+    }
     </style>
 </head>
 
@@ -166,7 +187,7 @@
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
             <!-- Logo and Text -->
             <img src="img/logo.png" alt="Surf School Logo" class="me-2" style="height: 40px; width: auto;">
-            <h2 class="mb-0 text-uppercase" style="font-size: 1.5rem;">SURFSCHOOL</h2>
+            <h2 class="mb-0 text-uppercase" style="font-size: 1.5rem;">Lombok Surfing</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse">
@@ -174,20 +195,17 @@
         </button>
     </nav>
 
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/s5.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 style="font-size: 5rem;">LOMBOK</h1>
-                        <h2 style="font-size: 2.5rem;">S U R F I N G</h2>
-                        <h3>Surf School in Kuta Lombok</h3>
-                        <p class="fs-5 mb-5 animated slideInDown" style="color: black;">RIDE YOUR FIRST WAVE TODAY</p>
-                    </div>
-                </div>
+<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="img/s5.jpg" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <h3>Surf School in Kuta Lombok</h3>
+                <p class="fs-5 mb-5 animated slideInDown" style="color: black;">RIDE YOUR FIRST WAVE TODAY</p>
             </div>
         </div>
     </div>
+</div>
     <!-- Header End -->
 
 
@@ -228,17 +246,6 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Right Column: Photo Grid -->
-            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="photo-grid">
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-                    <img src="img/s9.jpg" alt="Surf 1">
-                    <img src="img/s11.jpg" alt="Surf 1">
-                    <img src="img/s10.jpg" alt="Surf 2">
-                    <img src="img/s13.jpg" alt="Surf 5">
-                </div>
-            </div>
         </div>
     </div>
     <!-- About Our School Section End -->
@@ -253,7 +260,7 @@
     <br>
     <div class="d-flex flex-wrap align-items-center">
         <!-- Gambar di sebelah kiri -->
-        <img src="img/service-1.jpeg" alt="Beginner Surf" class="img-fluid mb-3" style="max-width: 50%; margin-right: 20px;">
+            <img src="img/s5.jpg" alt="Intermediate Surf" class="img-fluid mb-3">
         
         <!-- Teks di sebelah kanan -->
         <div>
@@ -290,7 +297,7 @@
         <!-- INTERMEDIATE SURF PACKAGE -->
         <div class="surf-package">
             <h3>Intermediate Surf Package</h3>
-            <img src="img/service-1.jpg" alt="Intermediate Surf" class="img-fluid mb-3">
+            <img src="img/s5.jpg" alt="Intermediate Surf" class="img-fluid mb-3">
             <p><strong>Description:</strong> Sessions at spots with larger, more stable waves - 2 hours in the water.</p>
             <ul>
                 <li>Instructor</li>
@@ -321,7 +328,7 @@
         <!-- ADVANCED SURF PACKAGE -->
         <div class="surf-package">
             <h3>Advanced Surf Package</h3>
-            <img src="img/service-2.jpg" alt="Advanced Surf" class="img-fluid mb-3">
+            <img src="img/s5.jpg" alt="Advanced Surf" class="img-fluid mb-3">
             <p><strong>Description:</strong> Lessons at challenging spots with fast waves - 2 hours in the water.</p>
             <ul>
                 <li>Instructor</li>
@@ -352,7 +359,7 @@
         <!-- PRIVATE SURF PACKAGE -->
         <div class="surf-package">
             <h3>Private Surf Package</h3>
-            <img src="img/service-3.jpeg" alt="Private Surf" class="img-fluid mb-3">
+            <img src="img/s5.jpg" alt="Private Surf" class="img-fluid mb-3">
             <p><strong>Description:</strong> Freedom to explore South Lombok's best waves based on daily conditions and your comfort level - 2 hours in the water.</p>
             <ul>
                 <li>Private Instructor</li>
@@ -383,7 +390,7 @@
         <!-- SURF GUIDING PACKAGE -->
         <div class="surf-package">
             <h3>Surf Guiding Package</h3>
-            <img src="img/service-3.webp" alt="Surf Guiding" class="img-fluid mb-3">
+            <img src="img/s5.jpg" alt="Surf Guiding" class="img-fluid mb-3">
             <p><strong>Description:</strong> Explore the waves on Lombok Island and get an unforgettable fun experience.</p>
             <ul>
                 <li>Instructor</li>
@@ -415,6 +422,27 @@
         <br>
         <br>
 
+<div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="photo-grid text-center">
+        <!-- Menambahkan kotak untuk menampung gambar -->
+        <div class="image-container">
+            <img src="img/s9.jpg" alt="Surf 1">
+            <img src="img/s11.jpg" alt="Surf 2">
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+        <div class="photo-grid text-center">
+        <!-- Menambahkan kotak untuk menampung gambar -->
+        <div class="image-container">
+            <img src="img/s10.jpg" alt="Surf 1">
+            <img src="img/s13.jpg" alt="Surf 2">
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+
+
+
     <!-- Google Map Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.3s">
         <iframe
@@ -435,7 +463,7 @@
         <div class="container text-center py-5">
             <a href="index.html">
                 <h1 class="display-4 mb-3 text-dark text-uppercase">
-                <img src="img/logo.png" alt="Surf School Logo" class="me-2" style="height: 80px; width: auto;">SURFSCHOOL</h1>
+                <img src="img/fixlogo.png" alt="Surf School Logo" class="me-2" style="height: 160px; width: auto;"></h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="http://tiktok.com/@lombok_surfing"><i
